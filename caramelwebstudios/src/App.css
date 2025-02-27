@@ -1,35 +1,114 @@
 /* Ensure body and html take full space */
-html, body {
+body {
     margin: 0;
     padding: 0;
     overflow: hidden; /* Prevents unwanted scrolling */
-    background-color: #f4e1c1; /* Caramel background */
+    background-color: #dbc7a9; /* Caramel background */
     color: #c96f36; /* Dark brown text */
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container-fluid {
+    display: flex;
+    flex-grow: 1; /* Ensures that the container expands to fill available space */
+    flex-direction: row;
 }
 
-.logo {
-    height: 20em;
-    width: auto;
+.left-column {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+   
 }
+
+    .logo {
+        width: 100%; /* Image takes full width of the column */
+        max-width: 500px; /* Max width to maintain image size */
+        margin: 2rem auto; /* Centers the image horizontally */
+        display: block;
+    }
+
+
+
+.main-image {
+    width: 100%; /* Makes the image take full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-top-left-radius: 40px; /* Rounded upper-left corner */
+    border-top-right-radius: 40px; /* Rounded upper-right corner */
+    object-fit: cover;
+    margin-left:-20px;
+    margin-right:2px;
+    opacity: 0.7;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #6b7c8f;
+    height: 100vh; /* Full height of the viewport */
+
+}
+
+
 
 
 .navbar {
-    background-color: rgba(255, 223, 186, 0.8); /* Translucent caramel for navbar */
+    background-color: #4b3f26; 
+   
 }
 
 .nav-link {
-    color: #4b3f26; /* Dark brown text for links */
+    color: white; /* Dark brown text for links */
+    display: flex;
+    list-style: none; /* Removes bullets */
+    flex-direction: column;
+    align-items: center;
 }
 
+    .nav-link a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+        margin: 10px 0;
+        display: block;
+        padding-bottom: 50px;
+        position: relative;
+        /* Full-width underline */
+    }
+
+        .nav-link a::after {
+            content: "";
+            display: flex;
+            width: 380px;
+            height: 2px;
+            background-color: #dbc7a9;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    .nav-link a:hover::after {
+        width: 100%;
+    }
+
+
 .navbar-brand {
-    color: #4b3f26; /* Dark brown for logo */
+    color: #f4e1c1; /* Dark brown for logo */
 }
 
 footer {
     background-color: #4b3f26; /* Dark brown footer */
-    color: #f4e1c1; /* Caramel footer text */
-    padding: 10px 0;
+    color: #c96f36; /* Caramel footer text */
+    padding: 10px;
     text-align: center;
+    position: fixed;
+    width: 100%;
 }
 
 button {
@@ -40,6 +119,176 @@ button {
     cursor: pointer;
 }
 
- button:hover {
+    button:hover {
         background-color: #d0a750; /* Slightly darker caramel on hover */
+        color: #4b3f26;
     }
+
+
+
+
+.quote-page {
+    background-color: #dbc7a9; /* Caramel theme */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #4b3f26;
+}
+
+.form-control {
+    border: 2px solid #c96f36;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+    .form-control:focus {
+        border-color: #d0a750;
+        box-shadow: none;
+    }
+
+.btn-primary {
+    background-color: #4b3f26;
+    color: #f4e1c1;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .btn-primary:hover {
+        background-color: #d0a750;
+        color: #4b3f26;
+    }
+
+.services-container {
+    padding: 50px;
+    background-color: #dbc7a9; /* Caramel background */
+    color: #4b3f26;
+    text-align: center;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-card {
+    background: #f4e1c1;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+
+.services-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #c96f36; /* Caramel heading */
+    text-transform: uppercase;
+    border-bottom: 2px solid #c96f36;
+
+    padding-bottom: 5px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #c96f36; /* Underline effect */
+}
+
+.service-card p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4b3f26; /* Dark caramel */
+    padding: 15px 30px;
+    color: white;
+}
+.back-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.contact-form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #dbc7a9; /* Caramel background */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #c96f36;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    color: #4b3f26;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c96f36;
+    border-radius: 5px;
+}
+
+textarea.form-control {
+    height: 100px;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+.submit-btn {
+    background-color: #c96f36; /* Caramel button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .submit-btn:hover {
+        background-color: #a55b2a;
+    }
+
+

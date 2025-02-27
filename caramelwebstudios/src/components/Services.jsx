@@ -1,10 +1,33 @@
-// This file allows you to configure ESLint according to your project's needs, so that you
-// can control the strictness of the linter, the plugins to use, and more.
 
-// For more information about configuring ESLint, visit https://eslint.org/docs/user-guide/configuring/
+import Header from './Header.jsx';
 
-module.exports = [
-    {
-        rules: {}
-    }
+
+
+const services = [
+    { title: "UI/UX Design", description: "We create intuitive and visually appealing user experiences." },
+    { title: "E-commerce Solutions", description: "Custom online stores using Shopify, WooCommerce, and more." },
+    { title: "Web Development & Maintenance", description: "Developing fast, responsive websites and keeping them up-to-date." },
+    { title: "CMS Integration", description: "Seamless integration with WordPress and other CMS platforms." }
 ];
+
+function Services() {
+    return (
+        <>
+            <Header />
+        <div className="services-container">
+            
+            <h1 className="text-center services-title">Our Services</h1>
+            <div className="services-list">
+                {services.map((service, index) => (
+                    <div key={index} className="service-card">
+                        <h2>{service.title}</h2>
+                        <p>{service.description}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+        </>
+    );
+
+}
+export default Services;
