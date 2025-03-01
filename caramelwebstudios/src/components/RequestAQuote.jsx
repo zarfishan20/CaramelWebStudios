@@ -37,7 +37,7 @@ const RequestAQuote = () => {
                 <h1 className="text-center mb-4 services-title">Request a Quote</h1>
                 <p className="text-center">Tell us about your project, and we'll get back to you.</p>
                 <div className="form-container">
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} netlify>
                         <div className="mb-3">
                             <label htmlFor="name" className="form-label">Your Name</label>
                             <input

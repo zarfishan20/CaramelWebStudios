@@ -70,7 +70,7 @@ function Contact() {
                 {submitted ? (
                     <p className="success-message">Thank you! Your message has been sent.</p>
                 ) : (
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} netlify>
                         <div className="form-group">
                             <label>Name</label>
                             <input
