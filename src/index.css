@@ -1,13 +1,365 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Caramel Theme Variables */
+:root {
+  --primary-bg-color: #8d6e63; /* Caramel Brown */
+  --primary-text-color: #fff; /* White Text */
+  --secondary-bg-color: #f1e0c6; /* Creamy Beige */
+  --secondary-text-color: #5d4037; /* Darker Brown */
+  --accent-color: #fbc02d; /* Golden Caramel Accent */
+  --link-color: #d57f2b; /* Light Caramel for Links */
+  --hover-color: #f39c12; /* Hover Color for Links */
+  --font-family-base: 'Josefin Sans', sans-serif;
+  --font-family-headings: 'Poppins', sans-serif;
+  --card-background-color: #fff3e0; /* Soft Caramel Background for Cards */
+  --footer-background-color: #f5f5f5; /* Light Beige Footer */
+  --footer-text-color: #8e6e53; /* Dark Caramel for Footer Text */
+  --button-bg-color: #fbc02d; /* Caramel Button Background */
+  --button-hover-bg-color: #f39c12; /* Hover Effect for Buttons */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Global Styles */
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--primary-bg-color);
+  margin: 0;
+  padding: 0;
+  color: var(--primary-text-color);
 }
+
+h1, h2, h3, h5 {
+  font-family: var(--font-family-headings);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--hover-color);
+  text-decoration: none;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #f8f9fa; /* Light background for the navbar */
+  color: #5a3e1b; /* Dark caramel color for the text */
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-link {
+  color: #5a3e1b !important; /* Dark caramel color for links */
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #b86b00 !important; /* Darker caramel color on hover */
+}
+
+
+.navbar-toggler:focus {
+  outline: none; /* Remove the focus outline for better look */
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to bottom right, #f6e3b4, #f1c27d); /* Soft caramel gradient */
+  color: var(--primary-text-color);
+  padding: 150px 0 50px; /* Add top padding to compensate for navbar */
+  text-align: center;
+  background-size: cover; /* Ensure the background covers the full area */
+  background-position: center; /* Keep the focus in the center */
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #5a3e1b; /* Dark caramel color */
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  color: #7a5c33; /* Slightly lighter caramel */
+  margin-bottom: 30px;
+}
+
+
+/* Button Styling */
+.btn-warning {
+  background-color: var(--button-bg-color);
+  border-color: var(--button-bg-color);
+  color: white;
+}
+
+.btn-warning:hover {
+  background-color: var(--button-hover-bg-color);
+  border-color: var(--button-hover-bg-color);
+}
+
+/* Services Section */
+#services, #projects, #contact {
+  background-color: var(--secondary-bg-color);
+  padding: 50px 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+#services h2, #projects h2, #contact h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--secondary-text-color);
+}
+
+/* Service Cards */
+.services-card {
+  background-color: var(--card-background-color);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.services-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--link-color);
+}
+
+footer a:hover {
+  color: var(--hover-color);
+}
+
+/* Contact Form */
+form {
+  margin-top: 2rem;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form input, form button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: var(--card-background-color);
+}
+
+/* Form Submit Button */
+form button {
+  background-color: var(--button-bg-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+/* Responsive Design for Hero Section */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* General resets */
+body {
+  padding-top: 70px; /* To offset the fixed-top navbar */
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #fffaf3; /* A soft caramel background */
+  color: #333;
+}
+
+a {
+  color: #b86b00;
+}
+
+a:hover {
+  color: #8a5200;
+}
+
+/* Hero section styling */
+.hero-section {
+  height: 90vh;
+  background: linear-gradient(to bottom right, #fff3e0, #ffe0b2);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #5a3e1b;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #7a5c33;
+}
+
+/* Card styling for services and projects */
+.card {
+  border: none;
+  transition: transform 0.2s ease-in-out;
+  background-color: #fff5e6;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #f0e6d6;
+  color: #6c4f3d;
+  font-size: 0.9rem;
+}
+
+/* Contact form */
+form {
+  margin-top: 2rem;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form p {
+  margin-bottom: 1rem;
+}
+
+form input, form button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Add to App.css or create a new CSS file for QuotePage */
+/* Quote Page Header */
+.quote-page-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-text-color); /* Adjusted for theme */
+  margin-bottom: 2rem;
+}
+
+/* Quote Form Container */
+.quote-form-container {
+  background-color: #fffaf3; /* Soft caramel background */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quote-form-container h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-text-color); /* Dark text for contrast */
+}
+
+/* Quote Form Styling */
+.quote-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Input fields and buttons */
+.quote-form-container form input,
+.quote-form-container form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px; /* Rounded edges for a smoother look */
+  border: 1px solid #ddd;
+}
+
+/* Input focus styling */
+.quote-form-container form input:focus,
+.quote-form-container form button:focus {
+  outline: none;
+  border-color: var(--accent-color); /* Accent color on focus */
+  box-shadow: 0 0 5px var(--accent-color); /* Soft glow effect */
+}
+
+/* Button Styling */
+.quote-form-container form button {
+  background-color: var(--accent-color); /* Caramel color */
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quote-form-container form button:hover {
+  background-color: #f39c12; /* Darker caramel shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .quote-page-header {
+    font-size: 2rem;
+  }
+
+  .quote-form-container form input,
+  .quote-form-container form button {
+    font-size: 0.9rem;
+  }
+}
+
+
