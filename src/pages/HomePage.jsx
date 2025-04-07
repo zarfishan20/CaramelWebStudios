@@ -1,7 +1,5 @@
 import React from 'react';
-import { Container, Button, Row, Col, Card  } from 'react-bootstrap';
- 
-import { Link } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 import HeroSection from '../components/HeroSection'; // Import HeroSection
 import Projects from '../components/Projects';     // Import Projects
 import Services from '../components/Services';     // Import Services
