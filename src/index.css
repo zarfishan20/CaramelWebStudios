@@ -1,29 +1,29 @@
-/* Neutral Minimalist Theme Variables */
+/* Neutral Minimalist Theme Variables - Updated */
 :root {
-  --body-bg-color: #D5BDAF; /* Very Light Background */
-  --body-text-color: #432818; /* Deep contrast (could use your earlier #432818) */
+  --body-bg-color: #ffffff; /* Clean White Background */
+  --body-text-color: #2d3142; /* Deep Navy Text for Contrast */
 
-  --primary-bg-color: #E3D5CA; /* Soft Beige Primary */
-  --primary-text-color: #432818; /* Dark text on light bg */
+  --primary-bg-color: #bfc0c0; /* Soft Grey Primary */
+  --primary-text-color: #2d3142; /* Strong Text on Light Grey */
 
-  --secondary-bg-color: #D5BDAF; /* Warm Nude Secondary */
-  --secondary-text-color: #fff; /* Light text on dark-ish bg */
+  --secondary-bg-color: #ffffff; /* Clean Secondary Background */
+  --secondary-text-color: #4f5d75; /* Calm Slate Text */
 
-  --button-bg-color: #432818; /* Taupe button */
-  --button-hover-bg-color: #99582a; /* Cream hover */
-  --button-text-color: #D6CCC2; 
+  --button-bg-color: #ef8354; /* Bold Warm Orange */
+  --button-hover-bg-color: #4f5d75; /* Muted Slate on Hover */
+  --button-text-color: #ffffff; /* White Button Text */
 
-  --link-color: #99582a; /* Warm caramel link */
-  --link-hover-color: #bb9457;
+  --link-color: #ef8354; /* Warm Orange Links */
+  --link-hover-color: #4f5d75; /* Subtle Slate Hover */
 
   --font-family-base: 'Josefin Sans', sans-serif;
   --font-family-headings: 'Poppins', sans-serif;
 
-  --card-background-color: #ffffff; /* Clean card bg */
-  --card-text-color: #432818;
+  --card-background-color: #ffffff; /* Clean White Cards */
+  --card-text-color: #2d3142; /* High Contrast Text */
 
-  --footer-background-color: #D6CCC2;
-  --footer-text-color: #432818;
+  --footer-background-color: #bfc0c0; /* Soft Grey Footer */
+  --footer-text-color: #2d3142; /* Clear, Strong Text */
 }
 
 
