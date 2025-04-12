@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const CustomNavbar = () => (
   <Navbar bg="light" expand="lg" className="shadow-sm p-3 fixed-top">
     <Container>
-      <Navbar.Brand as={Link} to="/">Caramel Web Studios</Navbar.Brand>
+      <Navbar.Brand as={Link} to="/" className="navbar-brand">Caramel Web Studios</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ms-auto">

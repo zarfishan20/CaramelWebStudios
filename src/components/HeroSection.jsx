@@ -8,7 +8,7 @@ const HeroSection = () => (
       <h1>Creating Beautiful & Functional Websites</h1>
       <p>Web development & design solutions tailored for your business.</p>
       {/* Use Link to go to the Quote Page */}
-      <Button variant="warning" size="lg" as={Link} to="/quote">
+      <Button className="btn-warning" size="lg" as={Link} to="/quote">
         Request a Quote
       </Button>
     </div>
