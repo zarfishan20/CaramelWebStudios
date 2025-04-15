@@ -9,7 +9,9 @@ import ContactPage from './pages/ContactPage';
 import CustomNavbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import QuotePage from "./pages/QuotePage";
-
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/Terms';
+import NotFound from "./pages/NotFound";
 const App = () => (
   <Router>
   <CustomNavbar />
@@ -18,6 +20,9 @@ const App = () => (
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
+        <Route path="*" element={<NotFound />} />
     <Route path="/quote" element={<QuotePage />} /> {/* Define the route for Quote Page */}
   </Routes>
  

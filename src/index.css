@@ -52,3 +52,12 @@ a:hover {
   text-decoration: none;
 }
 
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg-color);
+}
