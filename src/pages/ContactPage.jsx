@@ -4,7 +4,7 @@ import Contact from "../components/Contact";  // Import the Contact component
 
 const ContactPage = () => {
   return (
-    <div className="container py-5">
+    <div className="section-container py-5">
       
       <Contact /> {/* Render Contact component */}
     </div>

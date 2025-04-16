@@ -1,72 +1,172 @@
-
-/* Navbar Styling */
-.navbar {
+  /* Responsive Design */
+ 
+ 
+  .navbar {
     background-color: var(--body-bg-color); /* Light background for the navbar */
     color:var(--primary-text-color); /* Dark caramel color for the text */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+  }
+  .nav-link.active {
+    color: var(--link-hover-color); /* Active tab text color */
+   
   }
   
+ 
+  @media (max-width: 768px) {
+    .navbar-collapse {
+      transition: margin-top 0.3s ease-in-out;
+    }
+
+
+    .navbar {
+      justify-content: center;
+    }
+    .navbar-brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-section p {
+      font-size: 1rem;
+    }
+  
+    .quote-page-header {
+      font-size: 2rem;
+    }
+  
+    .quote-form-container form input,
+    .quote-form-container form button {
+      font-size: 0.9rem;
+    }
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+
+/* Base navbar link styles */
+.navbar-nav .nav-link {
+  position: relative;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+
+
+/* Underline animation */
+@media (min-width: 992px) {
+  .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--link-hover-color);
+    transition: width 0.3s ease;
+  }
+  .navbar-nav .nav-link:hover::after {
+    width: 100%;
+  }
+}
+
+
   .navbar .navbar-brand,
   .navbar .navbar-nav .nav-link {
     color:var(--link-color); /* Dark caramel color for links */
     font-weight: bold;
   }
   
+  .brand-text {
+    font-family: var(--font-family-headings);
+    color:var(--link-color); /* Dark caramel color for links */
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 1; /* helps with vertical alignment */
+    margin-bottom: 2px;
+  }
+
+  .navbar-brand:hover,
+.navbar-brand:focus {
+  color: var(--primary-text-color); /* No change on hover */
+  text-decoration: none;
+}
+  
   .navbar .navbar-nav .nav-link:hover {
     color: var(--link-hover-color);/* Darker caramel color on hover */
   }
-  
-  .navbar-toggler:focus {
-    outline: none; /* Remove the focus outline for better look */
+
+
+  .navbar-toggler, .navbar-toggler:focus {
+
+ /* keep background neutral */
+    box-shadow: none !important; /* remove focus ring */
+  }
+  .navbar-collapse {
+    position: relative;
   }
   
+  .navbar-toggler:hover {
+    background-color: var(--link-color) !important;
+
+    box-shadow: none !important;
+  }
+
+
+  .page-container {
+    width: 100%;
+    height: 100vh; /* Ensure sections cover the full height */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 0 2rem; /* Padding to prevent content from touching edges on small screens */
+    box-sizing: border-box;
+  }
+
+
   /* Hero Section */
+  
   .hero-section {
-    background: var(--primary-text-color); /* Soft caramel gradient */
+    background: var(--primary-bg-color); /* Soft caramel gradient */
     color: var(--primary-text-color);
     padding: 15px 0 50px;
     text-align: center;
     background-size: cover;
     background-position: center;
+    
   }
   
   .hero-section h1 {
     font-size: 3rem;
-    font-weight: bold;
-    color: var(--primary-bg-color) /* Dark caramel color */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-text-color); /* #2d3142 */
+    
   }
   
   .hero-section p {
     font-size: 1.25rem;
+    font-style: italic;
     color: var(--body-bg-color); /* Slightly lighter caramel */
-    margin-bottom: 30px;
+    margin-bottom:2rem;
   }
   
-  /* Button Styling */
-  .custom-button {
-    background-color: var(--body-bg-color);
-    border-color: var(--button-bg-color);
-    margin-top: 10px;
-    color: var(--button-text-color);
-  }
   
-  .custom-button:hover {
-    background-color: var(--button-hover-bg-color);
-    border-color: var(--button-hover-bg-color);
-  }
   
-  /* Services, Projects, and Contact Section */
-  #services, #projects, #contact {
-    background-color: var(--secondary-bg-color);
-    padding: 50px 20px;
-    border-radius: 8px;
-    margin-top: 30px;
-  }
-  
-  #services h2, #projects h2, #contact h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--secondary-text-color);
-  }
   
   /* Service Cards */
   .services-card {
@@ -80,6 +180,38 @@
   .services-card:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
+
+  /*Service Page */
+
+
+  .section-heading {
+    font-family: var(--font-family-headings);
+    font-size: 2.5rem;
+    color: var(--primary-text-color);
+  }
+  
+  .servicepage-card {
+    background-color: var(--card-background-color);
+    color: var(--card-text-color);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 1.25rem;
+  }
+  
+  .servicepage-card:hover {
+    transform: translateY(-5px);
+  }
+
+.servicepage a{
+
+  color: var(--link-color);
+  font-size: small;
+}
+.servicepage a:hover{
+
+  color: var(--link-hover-color);
+  font-size: small;
+}
+
   
   /* Footer */
   footer {
@@ -99,138 +231,16 @@
   footer a:hover {
     color: var(--hover-color);
   }
-  
-  /* Contact Form */
-  form {
-    margin-top: 2rem;
-    text-align: left;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+
+
+  footer p {
+    color: var(--accent-color);
+   font-weight: 400;
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
   
-  form input, form button {
-    width: 100%;
-    padding: 0.75rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    background-color: var(--card-background-color);
-  }
-  
-  /* Form Submit Button */
-  form button {
-    background-color: var(--button-bg-color);
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  form button:hover {
-    background-color: var(--button-hover-bg-color);
-  }
-  
-  /* Quote Page */
-  .quote-form-header {
-    font-family: var(--font-family-headings);
-    color: var(--primary-text-color);
-    background-color: var(--primary-bg-color);
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .quote-form-container {
-    background-color: var(--card-background-color);
-    color: var(--card-text-color);
-    border-radius: 12px;
-    padding: 2rem;
-    max-width: 600px;
-    margin: auto;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  }
-  
-  .quote-form-container h3 {
-    font-size: 1.5rem;
-    color: var(--secondary-text-color);
-  }
-  
-  .quote-form-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .quote-form-container form input,
-  .quote-form-container form button {
-    padding: 0.75rem;
-    font-size: 1rem;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-  }
-  
-  .quote-form-container form input:focus,
-  .quote-form-container form button:focus {
-    outline: none;
-    border-color: var(--accent-color);
-    box-shadow: 0 0 5px var(--accent-color);
-  }
-  
-  .quote-form-container form button {
-    background-color: var(--accent-color);
-    border: none;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .quote-form-container form button:hover {
-    background-color: #f39c12;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .hero-section h1 {
-      font-size: 2rem;
-    }
-  
-    .hero-section p {
-      font-size: 1rem;
-    }
-  
-    .quote-page-header {
-      font-size: 2rem;
-    }
-  
-    .quote-form-container form input,
-    .quote-form-container form button {
-      font-size: 0.9rem;
-    }
-  }
-  .form-group label {
-    font-weight: 500;
-    color: var(--body-text-color);
-  }
-  
-  .form-control {
-    border: 1px solid var(--secondary-bg-color);
-    background-color: #fff;
-    color: var(--body-text-color);
-    font-family: var(--font-family-base);
-  }
-  
-  .custom-btn {
-    background-color: var(--button-bg-color);
-    color: var(--button-text-color);
-    border: none;
-    padding: 0.6rem 1.5rem;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .custom-btn:hover {
-    background-color: var(--button-hover-bg-color);
-  }
+
 
 
   /* Theme-based 404 page styling */
@@ -278,3 +288,48 @@
   background-color: var(--button-hover-bg-color);
   color: var(--button-text-color);
 }
+
+
+/* Pricing Page */
+
+.pricing-card {
+  background-color: var(--card-background-color);
+  color: var(--card-text-color);
+  transition: transform 0.2s ease-in-out;
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Tabs Styling */
+.nav-tabs {
+  border-bottom: 2px solid var(--primary-bg-color);
+}
+
+.nav-tabs .nav-link {
+  color: var(--primary-text-color); /* Tab text color */
+  font-family: var(--font-family-headings);
+  font-weight: bold;
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Increase padding for larger clickable area */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--secondary-bg-color); /* Hover color for tab text */
+  background-color: var(--primary-bg-color); /* Background color when hovering */
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--link-hover-color); /* Active tab text color */
+  background-color: var(--primary-bg-color); /* Active tab background color */
+  border-color: var(--primary-bg-color); /* Border color for active tab */
+}
+
+
+
+

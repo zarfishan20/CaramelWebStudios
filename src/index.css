@@ -4,20 +4,20 @@
   --body-text-color: #2d3142; /* Deep Navy Text for Contrast */
 
   --primary-bg-color: #bfc0c0; /* Soft Grey Primary */
-  --primary-text-color: #2d3142; /* Strong Text on Light Grey */
+  --primary-text-color: #c96f36; /* Strong Text on Light Grey */
 
   --secondary-bg-color: #ffffff; /* Clean Secondary Background */
   --secondary-text-color: #4f5d75; /* Calm Slate Text */
 
-  --button-bg-color: #ef8354; /* Bold Warm Orange */
+  --button-bg-color: #c96f36; /* Bold Warm Orange */
   --button-hover-bg-color: #4f5d75; /* Muted Slate on Hover */
   --button-text-color: #ffffff; /* White Button Text */
 
-  --link-color: #ef8354; /* Warm Orange Links */
+  --link-color: #c96f36; /* Warm Orange Links */
   --link-hover-color: #4f5d75; /* Subtle Slate Hover */
 
-  --font-family-base: 'Josefin Sans', sans-serif;
-  --font-family-headings: 'Poppins', sans-serif;
+  --font-family-base: 'Inter', sans-serif;
+  --font-family-headings: 'Outfit', sans-serif;
 
   --card-background-color: #ffffff; /* Clean White Cards */
   --card-text-color: #2d3142; /* High Contrast Text */
@@ -30,34 +30,149 @@
 
 
 /* Global Styles */
+
+* {
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
 body {
-  font-family: var(--font-family-base);
-  background-color: var(--body-bg-color);
-  margin: 0;
+  font-family: var(--font-family-base)!important;
+  background-color: whitesmoke!important; /* Changed from --body-bg-color */
+  color: var(--body-text-color)!important;
+  margin: 0!important;
   padding: 0;
-  color: var(--body-text-color);
-  padding-top: 100px; /* To offset the fixed-top navbar */
+  padding-top: 180px; /* Offset for fixed navbar */
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    margin-top 0.3s ease-in-out;
 }
 
-h1, h2, h3, h5 {
-  color: var(--font-family-headings);
+
+/* Light Section */
+.section-light {
+  background-color: var(--secondary-bg-color); /* Light Background */
+  color: var(--secondary-text-color); /* Text Color */
 }
 
+/* Dark Section */
+.section-dark {
+  background-color: var(--primary-bg-color); /* Dark Background */
+  color: var(--primary-text-color); /* Text Color */
+  margin-bottom: 10%;
+}
+.section-container {
+  width: 100%; /* Make the section full width */
+  max-width: 1200px; /* Set a maximum width for the sections */
+  margin: 0 auto; /* Center the section horizontally */
+  padding: 2rem; /* Adjust padding to provide space inside each section */
+  box-sizing: border-box; /* Include padding in the width calculation */
+
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-headings);
+  font-weight: 700;
+  color: var(--primary-text-color);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
 a {
+
   color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
 }
+
+
 
 a:hover {
   color: var(--link-hover-color);
   text-decoration: none;
+  transform: translateY(-2px);
 }
 
-button {
+button,
+.btn {
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
-  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
+button:hover,
+.btn:hover {
   background-color: var(--button-hover-bg-color);
+  transform: translateY(-2px);
+  color: var(--button-text-color);
 }
+
+
+
+.card {
+  background-color: var(--card-background-color);
+  color: var(--card-text-color);
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1.25rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  font-family: var(--font-family-base);
+}
+
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: var(--font-family-base);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: var(--font-family-base);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--button-bg-color);
+  box-shadow: 0 0 0 3px rgba(239, 131, 84, 0.2);
+  outline: none;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  color: var(--primary-text-color);
+}
+

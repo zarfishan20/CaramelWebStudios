@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 
 const QuotePage = () => {
   return (
- <Container>
+ <Container className='section-container'>
           <QuoteForm />
        </Container>
   );

@@ -12,6 +12,7 @@ import QuotePage from "./pages/QuotePage";
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/Terms';
 import NotFound from "./pages/NotFound";
+import PricingPage from "./pages/Pricing";
 const App = () => (
   <Router>
   <CustomNavbar />
@@ -19,6 +20,7 @@ const App = () => (
   <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-conditions" element={<TermsConditions />} />

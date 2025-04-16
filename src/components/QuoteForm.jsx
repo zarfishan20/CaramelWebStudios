@@ -2,8 +2,8 @@ import React from 'react';
 
 const QuoteForm = () => {
   return (
-<div className="container py-5">
-  <h2 className="quote-form-header">Request a Quote</h2>
+<div className="section-container py-5">
+  <h2 className="text-center">Request a Quote</h2>
   <form
     name="quote-form"
     method="POST"

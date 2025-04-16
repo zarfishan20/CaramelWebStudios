@@ -33,12 +33,23 @@ return(
   ref={navRef}
   >
     <Container>
-      <Navbar.Brand as={Link} to="/" className="navbar-brand">Caramel Web Studios</Navbar.Brand>
+      <Navbar.Brand as={Link} to="/"> 
+      <img
+    src="/logo.svg" // or your logo path
+    alt="Caramel Web Studios Logo"
+    width="100"
+    height="100"
+ className="d-inline-block align-top me-2"
+  />      
+        <span className="brand-text">Caramel Web Studios</span>
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ms-auto">
+
+      <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
           <Nav.Link as={Link} to="/services">Services</Nav.Link>
-          <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
+          <Nav.Link as={Link} to="/pricing">Packages</Nav.Link>
           <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
           {/* Add the Request a Quote link that goes to the Quote page */}
           <Nav.Link as={Link} to="/quote">Request a Quote</Nav.Link>

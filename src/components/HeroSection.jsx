@@ -3,12 +3,12 @@ import { Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => (
-    <Container className="hero-section text-center py-5 d-flex align-items-center justify-content-center">
+    <Container className=" section-container text-center py-5 d-flex align-items-center justify-content-center">
     <div>
-      <h1>Creating Beautiful & Functional Websites</h1>
-      <p>Web development & design solutions tailored for your business.</p>
+      <h1>Crafting beautiful, functional websites that grow your business.</h1>
+      <p>Design-forward, responsive, and reliable web solutions for modern brands.</p>
       {/* Use Link to go to the Quote Page */}
-      <Button className="custom-button" size="lg" as={Link} to="/quote">
+      <Button className="custom-button" as={Link} to="/quote">
         Request a Quote
       </Button>
     </div>
