@@ -3,7 +3,7 @@ import { Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => (
-    <Container className=" section-container text-center py-5 d-flex align-items-center justify-content-center">
+    <Container className=" text-center py-5 d-flex align-items-center justify-content-center">
     <div>
       <h1>Crafting beautiful, functional websites that grow your business.</h1>
       <p>Design-forward, responsive, and reliable web solutions for modern brands.</p>
