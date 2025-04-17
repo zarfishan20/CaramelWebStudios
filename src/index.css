@@ -51,6 +51,11 @@ body {
     margin-top 0.3s ease-in-out;
 }
 
+p{
+color: var(--link-hover-color);
+font-style: italic;
+
+}
 
 /* Light Section */
 .section-light {

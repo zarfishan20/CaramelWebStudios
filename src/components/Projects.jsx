@@ -2,8 +2,12 @@ import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
 const Projects = () => (
+  <>
+<h2 className="text-center mb-4">Our Work</h2>
+
+
   <Container id="projects" className="py-5">
-    <h2 className="text-center mb-4">Our Work</h2>
+    
     <Row className="g-4">
     <Col md={6}>
           <Card className="shadow-sm h-100">
@@ -39,6 +43,7 @@ const Projects = () => (
         </Col>
         </Row>
   </Container>
+  </>
 );
 
 export default Projects;

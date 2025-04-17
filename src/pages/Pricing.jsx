@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button, Tabs, Tab }  from 'react-bootstrap';
+import { Container, Row, Col, Card, Tabs, Tab }  from 'react-bootstrap';
 
 
 const packages = {
@@ -89,9 +89,13 @@ const packages = {
 
 const PricingPage = () => {
   return (
-    <Container className="py-5">
-      <h2 className="text-center mb-5">Our Packages</h2>
 
+<>
+
+<h2 className="text-center mb-5">Our Packages</h2>
+
+    <Container className="py-5">
+  
       <Tabs defaultActiveKey="webDevelopment" className="mb-4 justify-content-center" fill>
         <Tab eventKey="webDevelopment" title="Web Development & Design">
           <Section data={packages.webDevelopment} />
@@ -104,6 +108,8 @@ const PricingPage = () => {
         </Tab>
       </Tabs>
     </Container>
+    </>
+
   );
 };
 
@@ -121,7 +127,7 @@ const Section = ({ title, data }) => (
                   <li key={idx} className="mb-2">• {feature}</li>
                 ))}
               </ul>
-              <Button  className="mt-3 w-100">Buy</Button>
+              <a  href='/quote' className="mt-3 w-100">Learn More</a>
             </Card.Body>
           </Card>
         </Col>
