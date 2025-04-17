@@ -10,7 +10,15 @@ const Footer = () => (
 <Row className="g-4 ">
 <Col md={3} >
 
+<<<<<<< HEAD
 <p >&copy; 2023 - {new Date().getFullYear()} Caramel Web Studios</p> 
+=======
+<p>&copy; 2023 - {new Date().getFullYear()} Caramel Web Studios |
+   <p>
+  <Link to="/privacy-policy">Privacy Policy</Link> |{" "}
+  <Link to="/terms-conditions">Terms & Conditions</Link>
+</p>
+>>>>>>> 181f50c22fffc1c72c27e5b4b78f8eab44d35290
 
 </Col>
 <Col md={3} >
