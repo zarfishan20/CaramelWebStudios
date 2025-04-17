@@ -181,3 +181,7 @@ form label {
   color: var(--primary-text-color);
 }
 
+.icon-style {
+  color: #c96f36;
+  margin-bottom: 1rem;
+}

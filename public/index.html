@@ -15,6 +15,32 @@
     <title>Caramel Web Studios</title>
   </head>
   <body>
+    <form name="quote-form" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <select name="website-type">
+        <option value="business">Business Website</option>
+        <option value="ecommerce">E-commerce Website</option>
+        <option value="portfolio">Portfolio Website</option>
+        <option value="blog">Blog</option>
+        <option value="other">Other</option>
+      </select>
+      <textarea name="features"></textarea>
+      <select name="budget">
+        <option value="under-500">Under £500</option>
+        <option value="500-1000">£500 - £1000</option>
+        <option value="1000-5000">£1000 - £5000</option>
+        <option value="5000-10000">£5000 - £10000</option>
+        <option value="above-10000">Above £10000</option>
+      </select>
+      <input type="text" name="timeline" />
+      <textarea name="notes"></textarea>
+    </form>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+       <input type="text" name="name"/>
+      <input type="email" name="email" />
+    </form>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

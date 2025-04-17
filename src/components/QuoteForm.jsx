@@ -1,6 +1,43 @@
-import React from 'react';
+
+import React, { useState, useRef } from 'react';
+
+
+
+
 
 const QuoteForm = () => {
+
+
+
+  const [submitted, setSubmitted] = useState(false);
+  const formRef = useRef(null);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+    fetch('/', {
+      method: 'POST',
+      body: data,
+    })
+      .then(() => {
+        setSubmitted(true);
+        form.reset(); // Clear the form
+
+        // OPTIONAL: send webhook/notification here
+        // fetch('https://your-webhook-url', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify(Object.fromEntries(data)),
+        // });
+
+        setTimeout(() => setSubmitted(false), 5000); // Hide message after 5s
+      })
+      .catch((error) => alert('Form submission failed. Try again.'));
+  };
+
+
+
   return (
 
 
@@ -10,16 +47,20 @@ const QuoteForm = () => {
 <h2 className="text-center">Request a Quote</h2>
 
 
-
-
 <div className="section-container py-5">
-  
+{submitted ? (
+          <div className="toast-success">
+             <strong>Thank you!</strong> We’ll get back to you soon.
+          </div>
+        ) : (
+
   <form
     name="quote-form"
     method="POST"
-      action="/thank-you"
       data-netlify="true"
   data-netlify-honeypot="bot-field"
+  onSubmit={handleSubmit}
+  ref={formRef}
   >
     <input type="hidden" name="form-name" value="quote-form" />
     <input type="hidden" name="bot-field" />
@@ -68,11 +109,11 @@ const QuoteForm = () => {
           <label htmlFor="budget">Budget Range*</label>
           <select name="budget" required className="form-control">
             <option value="">Select...</option>
-            <option value="under-500">Under $500</option>
-            <option value="500-1000">$500 - $1000</option>
-            <option value="1000-5000">$1000 - $5000</option>
-            <option value="5000-10000">$5000 - $10000</option>
-            <option value="above-10000">Above $10000</option>
+            <option value="under-500">Under £500</option>
+            <option value="500-1000">£500 - £1000</option>
+            <option value="1000-5000">£1000 - £5000</option>
+            <option value="5000-10000">£5000 - £10000</option>
+            <option value="above-10000">Above £10000</option>
           </select>
         </div>
 
@@ -98,6 +139,7 @@ const QuoteForm = () => {
       </button>
     </div>
   </form>
+        )}
 </div>
 </>
   );
