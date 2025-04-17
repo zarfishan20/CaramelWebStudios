@@ -9,7 +9,8 @@ const Contact = () => (
   <section id="contact" className="py-5 d-flex flex-column justify-content-center align-items-center">
  
   <div  className="w-40">
-  <form name="contact" method="POST" netlify>
+  <form name="contact" method="POST"    action="/thank-you" data-netlify="true"
+  data-netlify-honeypot="bot-field">
     {/* Hidden input for Netlify */}
     <input type="hidden" name="form-name" value="contact" />
     <input type="hidden" name="bot-field" />

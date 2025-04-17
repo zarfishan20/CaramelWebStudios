@@ -17,8 +17,9 @@ const QuoteForm = () => {
   <form
     name="quote-form"
     method="POST"
-    netlify
-    netlify-honeypot="bot-field"
+      action="/thank-you"
+      data-netlify="true"
+  data-netlify-honeypot="bot-field"
   >
     <input type="hidden" name="form-name" value="quote-form" />
     <input type="hidden" name="bot-field" />
