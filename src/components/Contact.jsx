@@ -63,6 +63,15 @@ return(
         <input type="email" name="email" required className="form-control"/>
       </label>
     </div>
+
+
+    <div className="form-group">
+      <label>
+        Message*
+        <input type="text" name="message" required className="form-control"/>
+      </label>
+    </div>
+
     
     <div className="form-group">
       <button type="submit">Send</button>
