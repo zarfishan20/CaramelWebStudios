@@ -68,7 +68,8 @@ return(
     <div className="form-group">
       <label>
         Message*
-        <input type="text" name="message" required className="form-control"/>
+
+        <textarea id="message" name="message" class="form-control" rows="6" placeholder="Enter your message..."></textarea>
       </label>
     </div>
 
